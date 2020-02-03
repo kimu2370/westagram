@@ -48,6 +48,15 @@
    background-color: #f8f9f9;
 }
 
+.form .login-button-active {
+   cursor: pointer;
+   padding: 7px;
+   margin: 10px 40px;
+   color: #f1f1f1;
+   font-weight: 600;
+   background-color: #3897f0;
+}
+
 .form .login-button {
    padding: 7px;
    margin: 10px 40px;

@@ -1,5 +1,4 @@
 * {
-   /* border: 1px solid tomato; */
    box-sizing: border-box;
    position: relative;
 }
@@ -23,15 +22,8 @@ nav .logo {
    width: 360px;
 }
 
-nav .logo > * {
-   background-repeat: no-repeat;
-   height: 32px;
-   background-size: 90%;
-}
-
 nav .logo .logo-img {
-   width: 35px;
-   background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/logo.png");
+   width: 30px;
 }
 
 nav .logo .logo-bar {
@@ -42,8 +34,7 @@ nav .logo .logo-bar {
 }
 
 nav .logo .logo-text {
-   width: 120px;
-   background-image: url("/img/logo_text.png");
+   width: 90px;
 }
 
 nav .search input {
@@ -62,23 +53,8 @@ nav .menu {
 }
 
 nav .menu > * {
-   background-repeat: no-repeat;
-   height: 32px;
-   background-size: 90%;
-   width: 35px;
+   width: 30px;
    margin-left: 30px;
-}
-
-nav .menu .menu-search {
-   background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png");
-}
-
-nav .menu .menu-heart {
-   background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png");
-}
-
-nav .menu .menu-mypage {
-   background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png");
 }
 
 main {
@@ -90,15 +66,15 @@ main {
    margin-bottom: 100px;
 }
 
-main * {
+/* main * {
    width: 100%;
-}
+} */
 
 main .feeds {
    border: 1px solid #dbdbdb;
 }
 
-main .feeds,article,header,section,.feed-icons,.feed-state,.feed-comment {
+main .feeds,article,header,.feed-icons,.feed-state,.feed-comment {
    display: flex;
 }
 
@@ -114,17 +90,25 @@ main .feeds article {
 }
 
 main .feeds article header {
-   align-items: center;
-   padding: 10px;
+   justify-content: space-between;
+   
 }
 
+main .feeds article header div {
+   display: flex;
+   align-items: center;
+}
+
+main .feeds article header div .user {
+   display: flex;
+   flex-direction: column;
+}
+
+/* user */
+
 main .feeds article header .userimage {
-   border-radius: 100%;
-   background-size: 100%;
    width: 40px;
-   height: 35px;
-   background-repeat: no-repeat;
-   background-image: url("https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-19/s150x150/75291135_578402932948862_6152326637594607616_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_ohc=NyvYxcGaUg8AX8SBMRT&oh=276e894a2eb15482ec349caf56abbef4&oe=5EC19473")
+   border-radius: 50%;
 }
 
 .user {
@@ -140,30 +124,24 @@ main .feeds article header .userimage {
    opacity: 0.6;
 }
 
-main .feeds article header .threedots {                  
-   background-size: 100%;
+/*  ------------- */
+
+main .feeds article header .threedots {               
    width: 24px;
-   height: 24px;
-   background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/more.png");
 }
 
 main .feeds article section .feed-image {
    width: 614px;
-   height: 483px;
-   background-repeat: no-repeat;
-   background-image: url("https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-15/e35/82467602_2576778892391340_667086844844199994_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=rEJybHanNx8AX_ZqCyL&oh=254417355db51f2ef27f5130be591bdc&oe=5EBEC9BD");
 }
 
 main .feeds article section .feed-icons {
+   width: 100%;
    justify-content: space-between;
    padding: 8px;
 }
 
 main .feeds article section .feed-icons .heart,.comment,.share,.bookmark {
-   background-size: 100%;
-   background-repeat: no-repeat;
    width: 26px;
-   height: 26px;
 }
 
 main .feeds article section .feed-icons .three {
@@ -172,25 +150,7 @@ main .feeds article section .feed-icons .three {
    justify-content: space-between;
 }
 
-main .feeds article section .feed-icons .heart {
-   background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png");
-}
-
-main .feeds article section .feed-icons .comment {
-   background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/comment.png");
-}
-
-main .feeds article section .feed-icons .share {
-   background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/share.png");
-}
-
-main .feeds article section .feed-icons .bookmark {
-   background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/bookmark.png");
-}
-
 main .feeds article section .feed-state {
-   display: flex;
-   flex-direction: column;
    margin-left: 6.5px;
 }
 
@@ -199,7 +159,20 @@ main .feeds article section .feed-state {
    font-weight: 600;
 }
 
+.post {
+   width: 90%;
+}
+
+.post div span:nth-child(2) {
+   padding-left: 8px;
+   /* color: red; */
+}
+
+
 main .feeds article section .feed-comment {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
    margin-top: 10px;
    border-top: 1px solid #dbdbdb;
    align-items: center;
@@ -207,8 +180,17 @@ main .feeds article section .feed-comment {
    /* input 테두리 없애는법... */
 }
 
+main .feeds article section .feed-comment .comment-input {
+   width: 90%;
+}
+
+main .feeds article section .feed-comment .comment-Button {
+   width: 10%;
+}
+
 
 main .main-right {
+   width: 100%;
    display: flex;
    flex-direction: column;
    margin-top: 84px;
@@ -223,35 +205,80 @@ main .main-right {
 main .main-right .account {
    display: flex;
    align-items: center;
+   margin-bottom: 12px;
 }
 
 main .main-right .account .userimage {
-   border-radius: 100%;
-   background-size: 100%;
+   border-radius: 50%;
    width: 60px;
-   height: 48px;
-   background-repeat: no-repeat;
-   background-image: url("https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-19/s150x150/75291135_578402932948862_6152326637594607616_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_ohc=NyvYxcGaUg8AX8SBMRT&oh=276e894a2eb15482ec349caf56abbef4&oe=5EC19473")
-}
-.header {
-   display: flex;
-   justify-content: space-around;
-}
-.main {
-   display: flex;
-   flex-direction: column;
 }
 
 main .main-right .stories {
    display: flex;
    flex-direction: column;
+   padding: 15px 0 15px 15px;
    height: 182px;
+   margin-bottom: 12px;
+}
+
+main .main-right .header {
+   display: flex;
+}
+
+main .main-right .main {
+   display: flex;
+   flex-direction: column;
    overflow: hidden auto;
 }
 
+main .main-right .stories .header {
+   margin-bottom: 10px;
+}
 
+main .main-right .stories .header .title {
+   opacity: 0.5;
+   font-size: 15px;
+}
+
+main .main-right .stories .header .total {
+   font-size: 13px;
+}
+
+main .main-right .main section .userimage {
+   border-radius: 50%;
+   width: 48px;
+}
+
+main .main-right .recommends .header .title {
+   opacity: 0.5;
+   font-size: 15px;
+}
+
+main .main-right .recommends .header .total {
+   font-size: 13px;
+}
+
+main .main-right .main section {
+   display: flex;
+   align-items: center;
+   padding: 10px 0 10px 0;
+}
 
 main .main-right .recommends {
-   height: auto;
-   overflow: hidden auto;
+   display: flex;
+   flex-direction: column;
+   padding: 15px 0 15px 15px;
+   height: 182px;
+   overflow: hidden;
+}
+
+main .main-right .main .userimage {
+   border-radius: 50%;
+   width: 48px;
+}
+
+main .main-right .main section a {
+   margin-right: -30%;
+   text-decoration: none; 
+   outline: none;
 }
