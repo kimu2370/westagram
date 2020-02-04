@@ -90,13 +90,13 @@ main .feeds article {
 }
 
 main .feeds article header {
+   padding: 8px 12px 8px 12px;
    justify-content: space-between;
    
 }
 
 main .feeds article header div {
    display: flex;
-   align-items: center;
 }
 
 main .feeds article header div .user {
@@ -126,8 +126,8 @@ main .feeds article header .userimage {
 
 /*  ------------- */
 
-main .feeds article header .threedots {               
-   width: 24px;
+main .feeds article header .threedots {        
+   width: 28px;
 }
 
 main .feeds article section .feed-image {
@@ -151,6 +151,8 @@ main .feeds article section .feed-icons .three {
 }
 
 main .feeds article section .feed-state {
+   display: flex;
+   flex-direction: column;
    margin-left: 6.5px;
 }
 
@@ -159,8 +161,8 @@ main .feeds article section .feed-state {
    font-weight: 600;
 }
 
-.post {
-   width: 90%;
+.post div span:nth-child(1) {
+   cursor: pointer;
 }
 
 .post div span:nth-child(2) {
@@ -223,9 +225,11 @@ main .main-right .stories {
 
 main .main-right .header {
    display: flex;
+   justify-content: space-between;
+   padding-right: 10px;
 }
 
-main .main-right .main {
+main .main-right .stories .main {
    display: flex;
    flex-direction: column;
    overflow: hidden auto;
@@ -242,6 +246,13 @@ main .main-right .stories .header .title {
 
 main .main-right .stories .header .total {
    font-size: 13px;
+}
+
+main .main-right .recommends {
+   display: flex;
+   flex-direction: column;
+   padding: 15px 0 15px 15px;
+   margin-bottom: 12px;
 }
 
 main .main-right .main section .userimage {
@@ -268,17 +279,22 @@ main .main-right .recommends {
    display: flex;
    flex-direction: column;
    padding: 15px 0 15px 15px;
-   height: 182px;
+}
+
+main .main-right .recommends .main {
+   max-height: 180px;
    overflow: hidden;
 }
 
-main .main-right .main .userimage {
+main .main-right .recommends .main section .userimage {
    border-radius: 50%;
-   width: 48px;
+   width: 38px;
 }
 
 main .main-right .main section a {
-   margin-right: -30%;
+   margin-left: auto;
+   margin-right: 12px;
+   justify-content: space-around;
    text-decoration: none; 
    outline: none;
 }
