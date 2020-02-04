@@ -161,6 +161,10 @@ main .feeds article section .feed-state {
    font-weight: 600;
 }
 
+.post div span:nth-child(1):hover {
+   color: tomato;
+}
+
 .post div span:nth-child(1) {
    cursor: pointer;
 }
